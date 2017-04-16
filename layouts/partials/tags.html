@@ -1,7 +1,7 @@
 Tags {{ range $index, $tag :=  .Params.tags }}
   {{- if eq $index 0 -}}
-    <a href="/tags/{{ urlize . }}">{{ lower . }}</a>
+    <a href="/tags/{{ urlize . }}"><span class="label label-info">{{ lower . }}</span></a>
   {{- else -}}
-    , <a href="/tags/{{ urlize . }}">{{ lower . }}</a>
+    , <a href="/tags/{{ urlize . }}"><span class="label label-info">{{ lower . }}</span></a>
   {{- end -}}
 {{ end }}
